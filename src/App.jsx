@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./App.css";
 
 const App = () => {
@@ -8,8 +9,8 @@ const App = () => {
       <nav>
         <ul>
           <li>
-            <a href="shop">Shop page</a>
-            <a href="cart">Cart page</a>
+            <Link to="shop">Shop page</Link>
+            <Link to="cart">Cart page</Link>
           </li>
         </ul>
       </nav>

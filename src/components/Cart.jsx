@@ -1,3 +1,6 @@
+import React from 'react'
+import { Link } from "react-router-dom"
+
 const Cart = () => {
   return (
     <div>
@@ -7,8 +10,8 @@ const Cart = () => {
         <nav>
           <ul>
             <li>
-              <a href="/">Home page</a>
-              <a href="shop">Shop page</a>
+              <Link to="/">Home page</Link>
+              <Link to="shop">Shop page</Link>
             </li>
           </ul>
         </nav>
