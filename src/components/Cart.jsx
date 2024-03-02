@@ -11,7 +11,9 @@ const Cart = () => {
           <ul>
             <li>
               <Link to="/">Home page</Link>
-              <Link to="shop">Shop page</Link>
+            </li>
+            <li>
+              <a href="shop">Shop page</a>
             </li>
           </ul>
         </nav>

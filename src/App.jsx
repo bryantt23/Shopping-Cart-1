@@ -10,6 +10,8 @@ const App = () => {
         <ul>
           <li>
             <Link to="shop">Shop page</Link>
+          </li>
+          <li>
             <Link to="cart">Cart page</Link>
           </li>
         </ul>
