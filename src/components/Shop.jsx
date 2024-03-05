@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 
 const Shop = () => {
     const [coffeeData, setCoffeeData] = useState([]);
-
-    useEffect(() => {
-      fetch("https://fake-coffee-brand-api.vercel.app/api?limit=6")
-        .then((res) => res.json())
-        .then((data) => setCoffeeData(data));
+    
+    useEffect(async function () {
+        async function getData(items=20){
+            let data =await fetch(`https://fake-coffee-api.vercel.app/api?limit=${items}`);
+            let pureData= await data.json();
+            return pureData;
+          } 
+          const data = await getData(6)
+          console.log(data)
     }, []);
 
   return (
