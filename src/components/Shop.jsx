@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import Coffee from "./Coffee";
 
 const Shop = () => {
   const [coffeeData, setCoffeeData] = useState(null);
@@ -41,7 +42,7 @@ const Shop = () => {
         <ul>
           {coffeeData.map((coffee) => (
             <li key={coffee.id}>
-              <Link to={`/shop/${coffee.id}`}>{coffee.name}</Link>
+              <Link to={`/coffee/${coffee.id}`}>{coffee.name}</Link>
               <p>{coffee.description}</p>
               <p>Price: ${coffee.price}</p>
             </li>
@@ -50,17 +51,7 @@ const Shop = () => {
       ) : (
         <p>Loading coffees...</p>
       )}
-      {chosenCoffee && ( // Conditionally render detailed information
-        <div>
-          <h1>{chosenCoffee.name}</h1>
-          <p>{chosenCoffee.description}</p>
-          <p>Price: ${chosenCoffee.price}</p>
-          <p>Region: {chosenCoffee.region}</p>
-          <p>Weight: {chosenCoffee.weight}</p>
-          <p>Roast Level: {chosenCoffee.roast_level}</p>
-          <p>Flavor Profil: {chosenCoffee.flavor_profile}</p>
-        </div>
-      )}
+      {chosenCoffee && <Coffee coffee={chosenCoffee} />}
     </div>
   );
 };

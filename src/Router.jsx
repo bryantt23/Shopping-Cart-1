@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Shop from "./components/Shop.jsx";
 import Cart from "./components/Cart.jsx";
+import Coffee from "./components/Coffee.jsx";
 import App from "./App.jsx";
 import Error from "./Error.jsx";
 
@@ -17,8 +18,8 @@ const Router = () => {
       element: <Shop />,
     },
     {
-      path: "/shop/:id",
-      element: <Shop />,
+      path: "coffee/:id",
+      element: <Coffee />,
     },
 
     {
