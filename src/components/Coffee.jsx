@@ -1,9 +1,22 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 const Coffee = () => {
     const { id } = useParams();
-    console.log(id)
+    console.log(id);
+
+    useEffect(() => {
+        async function getData() {
+          let data = await fetch(
+            `https://fake-coffee-api.vercel.app/api/${id}`
+          );
+          let pureData = await data.json();
+          //setCoffeeData(pureData);
+          console.log(pureData)
+        }
+        getData();
+      }, []);
+      
 
   return (
     <div>
