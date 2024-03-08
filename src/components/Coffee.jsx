@@ -8,6 +8,7 @@ const Coffee = () => {
 
     useEffect(() => {
         async function getData() {
+          setCoffeeData("loading coffee");
           let data = await fetch(
             `https://fake-coffee-api.vercel.app/api/${id}`
           );
@@ -21,9 +22,12 @@ const Coffee = () => {
 
   return (
     <div>
-        <h1>COFFEE PAGE</h1>
-    {JSON.stringify(coffeeData)}
-          
+      <h1>COFFEE PAGE</h1>
+    {coffeeData === null ? (
+        <p>Loading coffee...</p>
+      ) : (
+        (JSON.stringify(coffeeData))
+      )}     
     </div>
   );
 };
