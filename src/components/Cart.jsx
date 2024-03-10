@@ -1,12 +1,11 @@
-import React from 'react'
-import { Link } from "react-router-dom"
+import React from 'react';
+import { Link } from "react-router-dom";
+import "../styles/Cart.css";
 
 const Cart = () => {
   return (
     <div>
-      <div>
-        <h1>Hello from the cart page!</h1>
-        <p>what now?</p>
+      <header className='navbar'>
         <nav>
           <ul>
             <li>
@@ -17,7 +16,7 @@ const Cart = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </header>
     </div>
   );
 };

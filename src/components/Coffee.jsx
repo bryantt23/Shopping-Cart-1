@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../styles/Coffee.css";
 
 const Coffee = () => {
@@ -20,7 +20,18 @@ const Coffee = () => {
 
   return (
     <div>
-      <h1>COFFEE PAGE</h1>
+      <header className="navbar">
+      <nav>
+          <ul>
+            <li>
+              <Link to="/">Home page</Link>
+            </li>
+            <li>
+              <a href="cart">Cart page</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       {coffeeData === null ? (
         <p>Loading coffee...</p>
       ) : (

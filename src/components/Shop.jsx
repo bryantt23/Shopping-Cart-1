@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import "../styles/Shop.css";
 import Coffee from "./Coffee";
 
 const Shop = () => {
   const [coffeeData, setCoffeeData] = useState(null);
   const [chosenCoffee, setChosenCoffee] = useState(null);
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     async function getData(items = 20) {
@@ -19,25 +20,29 @@ const Shop = () => {
   }, []);
 
   useEffect(() => {
-    if (id) { // Check if ID exists in the URL
-      const chosenCoffee = coffeeData?.find((coffee) => coffee.id === Number(id));
+    if (id) {
+      // Check if ID exists in the URL
+      const chosenCoffee = coffeeData?.find(
+        (coffee) => coffee.id === Number(id)
+      );
       setChosenCoffee(chosenCoffee);
     }
   }, [coffeeData, id]);
 
   return (
     <div>
-      <h1>Hello from the shop page!</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home page</Link>
-          </li>
-          <li>
-            <a href="cart">Cart page</a>
-          </li>
-        </ul>
-      </nav>
+      <header  className="navbar">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home page</Link>
+            </li>
+            <li>
+              <a href="cart">Cart page</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       {coffeeData ? (
         <ul>
           {coffeeData.map((coffee) => (

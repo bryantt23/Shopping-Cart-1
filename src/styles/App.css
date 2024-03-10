@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Play:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+    background-color: #422800 ;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fbeee0;
+    font-size: larger;
+  }
+
+
+body {
+  background-image: url(/images/coffeeshop1.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left;
+}
+
+.homeContainer {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.coffeeMessage {
+  color:#fbeee0;
+  text-shadow: 5px 5px 5px #422800;
+  font-size: 100px;
+}
+
+.shopNow {
+  text-decoration: none;
+  align-self:center;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+}
+
+.shopNow:hover {
+  transform: scale(1.1);
+}

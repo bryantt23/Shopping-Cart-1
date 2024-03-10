@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Play:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+    background-color: #eea60b ;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+  }
