@@ -8,11 +8,16 @@ const Cart = () => {
       <header className='navbar'>
         <nav>
           <ul>
-            <li>
-              <Link to="/">Home page</Link>
+          <li>
+              <Link to="/">
+                <img src="../images/homeIcon.png" alt="Home" className="home-icon" />
+              BRITT'S BREWS</Link>
             </li>
             <li>
-              <a href="shop">Shop page</a>
+              <Link to="shop">SHOP</Link>
+            </li>
+            <li>
+              <a href="cart">Cart page</a>
             </li>
           </ul>
         </nav>

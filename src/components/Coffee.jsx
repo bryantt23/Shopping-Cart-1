@@ -23,8 +23,13 @@ const Coffee = () => {
       <header className="navbar">
       <nav>
           <ul>
+          <li>
+              <Link to="/">
+                <img src="../images/homeIcon.png" alt="Home" className="home-icon" />
+              BRITT'S BREWS</Link>
+            </li>
             <li>
-              <Link to="/">Home page</Link>
+              <Link to="shop">SHOP</Link>
             </li>
             <li>
               <a href="cart">Cart page</a>
