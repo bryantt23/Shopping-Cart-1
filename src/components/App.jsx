@@ -8,15 +8,26 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">
-                <img src="../images/homeIcon.png" alt="Home" className="home-icon" />
-              BRITT'S BREWS</Link>
+              <Link to="/" className="home">
+                <img
+                  src="../images/homeIcon.png"
+                  alt="Home"
+                  className="home-icon"
+                />
+                BRITT'S BREWS
+              </Link>
             </li>
             <li>
-              <Link to="shop">SHOP</Link>
+              <Link to="shop" className="shop">SHOP</Link>
             </li>
             <li>
-              <Link to="cart">Cart page</Link>
+              <Link to="cart" className="cart">
+              <img
+                  src="../images/cart.png"
+                  alt="cart"
+                  className="cart-icon"
+                />
+              </Link>
             </li>
           </ul>
         </nav>
