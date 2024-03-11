@@ -5,7 +5,7 @@ import "../styles/Cart.css";
 const Cart = () => {
   return (
     <div>
-      <header className='navbar'>
+      {/* <header className='navbar'>
       <nav>
           <ul>
             <li>
@@ -32,7 +32,8 @@ const Cart = () => {
             </li>
           </ul>
         </nav>
-      </header>
+      </header> */}
+      <h1>cart page</h1>
     </div>
   );
 };

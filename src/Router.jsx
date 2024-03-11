@@ -9,11 +9,6 @@ import Error from "./Error.jsx";
 const Router = () => {
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: <App />,
-      errorElement: <Error />,
-    },
-    {
       path: "shop",
       element: <Shop />,
     },
@@ -21,10 +16,14 @@ const Router = () => {
       path: "coffee/:id",
       element: <Coffee />,
     },
-
     {
       path: "cart",
       element: <Cart />,
+    },
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <Error />,
     },
   ]);
   return <RouterProvider router={router} />;
