@@ -1,44 +1,42 @@
-import { Link } from "react-router-dom";
-import "../styles/App.css";
+import React from 'react';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import Shop from './Shop.jsx';
+import Cart from './Cart.jsx';
+import Coffee from './Coffee.jsx';
+import Nav from './Nav.jsx';
+import Error from './Error.jsx';
+import Home from './Home.jsx';
+// https://stackoverflow.com/questions/70833727/using-react-router-v6-i-need-a-navbar-to-permanently-be-there-but-cant-display
+// Wrapper component that includes the Nav and an Outlet for child routes
+const Layout = () => {
+  return (
+    <div>
+      <Nav />
+      <Outlet /> {/* Child routes will render here */}
+    </div>
+  );
+};
+
+// Updated router configuration to use the Layout component and nested routes
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { path: '/', element: <Home /> }, // Default path rendering the Home component
+      { path: 'shop', element: <Shop /> },
+      { path: 'coffee/:id', element: <Coffee /> },
+      { path: 'cart', element: <Cart /> },
+      // Add more nested routes here if necessary
+    ],
+    errorElement: <Error />,
+  },
+  // You can add more top-level routes here if needed
+]);
 
 const App = () => {
   return (
-    <>
-      <header className="navbar">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/" className="home">
-                <img
-                  src="../images/homeIcon.png"
-                  alt="Home"
-                  className="home-icon"
-                />
-                BRITT'S BREWS
-              </Link>
-            </li>
-            <li>
-              <Link to="shop" className="shop">SHOP</Link>
-            </li>
-            <li>
-              <Link to="cart" className="cart">
-              <img
-                  src="../images/cart.png"
-                  alt="cart"
-                  className="cart-icon"
-                />
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div className="homeContainer">
-        <h1 className="coffeeMessage">WE HAVE THE BREW FOR YOU</h1>
-        <Link to="shop" className="shopNow">
-          SHOP NOW
-        </Link>
-      </div>
-    </>
+    <RouterProvider router={router} />
   );
 };
 
